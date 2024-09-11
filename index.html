@@ -340,6 +340,65 @@
         .chat-options button:hover {
             background-color: #0088cc;
         }
+        #estiloBtn{
+            color: blue;
+        }
+        #estiloBtn {
+    background-color: #07080c; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+#estiloBtn:hover {
+    background-color: #00a2ff; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px; /* Adiciona algum espaço interno */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    max-width: 90%; /* Ajusta a largura máxima em relação ao tamanho da tela */
+}
+
+.conteudo img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px; /* Adiciona um espaço entre o texto e a imagem */
+}
+@media (max-width: 600px) {
+    .conteudo img {
+        max-width: 130%; /* Permite que a imagem ocupe até 100% da largura da div em telas menores */
+        height: 250px;
+    }
+}
+.container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Espaço entre as divs */
+        }
+        .item {
+            flex: 1 1 calc(25% - 20px); /* Ajusta a largura das divs */
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .item {
+                flex: 1 1 100%; /* Ajusta a largura para 100% em telas pequenas */
+            }
+        }
     </style>
 </head>
 <body>
@@ -358,18 +417,36 @@
             </nav>
         </div>
     </header>
-    <main>
-        <section id="home" class="hero">
-            <h1>Bem-vindo ao Cat. Produtos</h1>
-            <input type="text" placeholder="Buscar produtos..." class="search-bar" onkeyup="filterProducts()">
-        </section>
+    <main>  
         <section id="categories">
+            <br><br><br>
             <h2>Categorias</h2>
             <div class="category-list">
                 <div class="category">Eletrônicos</div>
                 <div class="category">Roupas</div>
                 <div class="category">Casa e Jardim</div>
             </div>
+        </section>
+
+        <br><br>
+
+        <div class="conteudo">
+       <img src="png (7).png" alt="">
+    </div>
+
+    <h2 style="text-align: center;">Produtos em destaque......</h2>
+
+    <div class="container">
+        <div class="item"> <img src="images-removebg-preview.png" alt=""> Item 1</div>
+        <div class="item"><img src="images-removebg-preview.png" alt=""> Item 2</div>
+        <div class="item"><img src="images-removebg-preview.png" alt=""> Item 3</div>
+        <div class="item"><img src="images-removebg-preview.png" alt=""> Item 4</div>
+    </div>
+        
+        
+        <section id="home" class="hero">
+            <h1>Bem-vindo ao Cat. Produtos</h1>
+            <input type="text" placeholder="Buscar produtos..." class="search-bar" onkeyup="filterProducts()">
         </section>
         <section id="products">
             <h2>Produtos</h2>
@@ -378,44 +455,46 @@
                     <img src="images-removebg-preview.png" alt="Produto 1">
                     <p>Produto 1</p>
                     <p>R$ 99,99</p>
-                    <button class="btnEstilo" onclick="addToCart('Produto 1', 99.99)">Adicionar ao Carrinho</button>
+                    <button id="estiloBtn" onclick="addToCart('Produto 1', 99.99)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="product-item" id="produto2">
                     <img src="images-removebg-preview.png" alt="Produto 2">
                     <p>Produto 2</p>
                     <p>R$ 199,99</p>
-                    <button onclick="addToCart('Produto 2', 199.99)">Adicionar ao Carrinho</button>
+                    <button id="estiloBtn" onclick="addToCart('Produto 2', 199.99)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="product-item" id="produto3">
                     <img src="images-removebg-preview.png" alt="Produto 3">
                     <p>Produto 3</p>
                     <p>R$ 150,00</p>
-                    <button onclick="addToCart('Produto 3', 150.00)">Adicionar ao Carrinho</button>
+                    <button id="estiloBtn" onclick="addToCart('Produto 3', 150.00)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="product-item" id="produto4">
                     <img src="images-removebg-preview.png" alt="Produto 4">
                     <p>Produto 4</p>
                     <p>R$ 250,00</p>
-                    <button onclick="addToCart('Produto 4', 250.00)">Adicionar ao Carrinho</button>
+                    <button id="estiloBtn" onclick="addToCart('Produto 4', 250.00)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="product-item" id="produto5">
                     <img src="images-removebg-preview.png" alt="Produto 5">
                     <p>Produto 5</p>
                     <p>R$ 300,00</p>
-                    <button onclick="addToCart('Produto 5', 300.00)">Adicionar ao Carrinho</button>
+                    <button id="estiloBtn" onclick="addToCart('Produto 5', 300.00)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="product-item" id="produto6">
                     <img src="images-removebg-preview.png" alt="Produto 6">
                     <p>Produto 6</p>
                     <p>R$ 120,00</p>
-                    <button onclick="addToCart('Produto 6', 120.00)">Adicionar ao Carrinho</button>
+                    <button id="estiloBtn" onclick="addToCart('Produto 6', 120.00)">Adicionar ao Carrinho</button>
                 </div>
             </div>
         </section>
         <section id="offers">
             <h2>Ofertas</h2>
             <div class="offer-list">
-                <!-- Adicione ofertas aqui -->
+                
+                
+
             </div>
         </section>
     </main>
